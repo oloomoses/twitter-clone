@@ -6,7 +6,7 @@
 
         <h2 class ="title is-2">Log In</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: user_session_path(resource_name)) do |f| %>
+          <%= simple_form_for(resource, as: resource_name, url: user_session_path) do |f| %>
 
               <div class="field">
                 <div class = "control">
@@ -30,7 +30,6 @@
               <div class="field">
                 <div class = "control">
                   <%= f.input :remember_me,
-                              label_html: {class: "label" },
                               as: :boolean if devise_mapping.rememberable? %>
                 </div>
               </div>
